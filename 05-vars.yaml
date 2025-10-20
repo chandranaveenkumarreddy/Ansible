@@ -1,0 +1,13 @@
+- name: variables
+  hosts: local
+  connection: local
+  vars:
+    my_name: "naveen kumar reddy"
+    my_age: 27
+    my_city: hyderabad
+    state: telangana
+    company: Virtusa
+    tasks:
+    - name: print variables
+      ansible.builtin.debug:
+        msg: "my name is {{ my_name }}. I am {{ my_age }} years old. I live in {{ my_city }}, {{ state }}. I work for {{ company }}"
